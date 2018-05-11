@@ -1,6 +1,4 @@
 // trieset 
-//console.log("trie set testing");
-// https://gist.github.com/tpae/72e1c54471e88b689f85ad2b3940a8f0
 
 function TrieNode(key){
 
@@ -93,7 +91,7 @@ function TrieSet() {
 
 
 }
-
+/*
 var ts = new TrieSet();
 
 ts.insert('stuff');
@@ -105,7 +103,9 @@ console.log(ts.find('s'));
 
 ts.reset();
 console.log(ts.find('s'));
+*/
 
+module.exports = TrieSet;
 
 
 

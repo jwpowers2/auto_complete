@@ -1,0 +1,72 @@
+<html>
+
+<head>
+
+<!--
+<script type="text/javascript" src="javascript.js"></script>
+<meta content-type: "application/json">
+-->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Share+Tech" rel="stylesheet">
+ 
+<script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type ="text/javascript">
+
+  $(document).ready(function (){
+
+    var socket  = io.connect();            
+
+      socket.on('auto_data', function(data){
+        //$("#auto_complete").text(data);
+        // add option to select id = auto_complete for each item in data
+        
+      }); 
+
+      $("#demo").on('input', function() {
+        //alert($(this).val());
+        socket.emit('input_value',$(this).val());
+      });
+      
+    })
+
+</script>
+
+</head>
+<body>
+
+ <div class="col-md-3 sidebar">
+  <h2>Autocomplete Demo</h2>
+</div>
+<hr>
+<div class="container">
+<div class="row">
+<div class="col-lg-9 h-100">
+
+<form action="/register" method="POST" autocomplete="off">
+<input id="demo" name="username" id="username" automcomplete="new-password">
+<input type="submit">
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="auto_complete">autocomplete</div>
+  
+
+</div>
+</div>
+</div>
+
+</body>
+</html>
