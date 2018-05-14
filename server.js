@@ -3,7 +3,7 @@ var path = require( "path");
 var TrieSet = require('./trieset');
 var bodyParser = require('body-parser');
 var app = express();
-const port = 8000;
+const port = 8080;
 
 
 app.use(express.static(path.join(__dirname, "./static")));
@@ -36,7 +36,7 @@ let User = require("mongoose").model("User");
   		}
   	});
 
-var server = app.listen(8080, function() {
+var server = app.listen(port, function() {
  console.log("listening on port 8000");
 });
 
