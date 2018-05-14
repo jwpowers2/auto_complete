@@ -171,8 +171,21 @@ $(document).ready(function (){
 <div class="container">
 <div class="row">
 <div class="col-lg-9 h-100">
-
 <form action="/register" method="POST" autocomplete="off">
+  <h2>Add a user</h2>
+  <input name="username" id="username" autocomplete="off">
+  <input type="submit">
+
+</form>
+
+<form action="/removeall" method="POST" autocomplete="off">
+  <h2>Remove All Users</h2>
+  <input type="submit">
+
+</form>
+
+<form action="/find" method="POST" autocomplete="off">
+  <h2>Find a user</h2>
   <div class="autocomplete">
   <input id="myInput" name="username" id="username" autocomplete="off">
   <input type="submit">
@@ -183,8 +196,10 @@ $(document).ready(function (){
 <br>
 <br>
 <br>
-<div id="auto_complete">autocomplete</div>
-  
+<div class="container">
+<% if(typeof message !== "undefined") {%>
+<%= message %>
+<% } %>
 
 </div>
 </div>
