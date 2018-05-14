@@ -18,14 +18,14 @@ var ts = new TrieSet();
 
 
 let User = require("mongoose").model("User");
-  	User.find({},(err,users)=>{
-  		if(!users){
+  	User.find({},(err,cities)=>{
+  		if(!cities){
   			console.log("problem getting users");
   		} else if (err){
           console.log(err);
   		} else {
-  			users.forEach(function(user){
-          ts.insert(user.username);
+  			cities.forEach(function(city){
+          ts.insert(city.name);
         });
   			//console.log(users);
 

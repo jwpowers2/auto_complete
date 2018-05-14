@@ -3,7 +3,7 @@ let mongoose = require('mongoose');
 
 mongoose.model('User', new mongoose.Schema({
 
-  username:{type: String},
+  name:{type: String},
   
 
-},{timestamps: true}));
+},{timestamps:true,collection:'segment'}));
