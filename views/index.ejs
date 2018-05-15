@@ -187,7 +187,7 @@ $(document).ready(function (){
 <form action="/find" method="POST" autocomplete="off">
   <h2>Find a user</h2>
   <div class="autocomplete">
-  <input id="myInput" name="username" id="username" autocomplete="off">
+  <input id="myInput" name="name" id="name" autocomplete="off">
   <input type="submit">
 </div>
 </form>
@@ -197,8 +197,11 @@ $(document).ready(function (){
 <br>
 <br>
 <div class="container">
+
 <% if(typeof message !== "undefined") {%>
-<%= message %>
+
+<p><%= message %></p>
+
 <% } %>
 
 </div>

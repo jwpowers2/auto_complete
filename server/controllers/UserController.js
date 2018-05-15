@@ -24,7 +24,7 @@ class UserController{
   find(req,res){
 
     // find a user and return the data
-    User.findOne({email:req.body.email}, (err,user)=>{
+    User.findOne({name:req.body.name}, (err,user)=>{
 
       if (err){
         res.render("index",{message:"error finding user"});

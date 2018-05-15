@@ -47,8 +47,9 @@ io.sockets.on('connection', function(socket){
 
   socket.on('input_value', function(data){
   	//console.log(data);
-
-  	io.emit('auto_data', ts.find(data));
+    let result_1 = ts.find(data);
+    let result_2 = result_1.slice(0,5);
+  	io.emit('auto_data', result_2);
   });
 
 });
